@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer components {
+  .btn {
+    @apply rounded py-2 px-3 shadow-lg cursor-pointer transition-opacity ease-in-out hover:opacity-90 active:opacity-85;
+  }
+
+  .btn-sm {
+    @apply text-sm py-1 px-2;
+  }
+
+  .clearhistory-btn {
+    @apply absolute bottom-0 left-0 border border-yellow-400 bg-yellow-300 transition-all ease-in-out hover:bg-yellow-400 active:bg-yellow-500 cursor-pointer text-black px-2 py-1 rounded-full text-xs font-bold shadow-2xl;
+  }
+}
+
+@layer utilities {
+  .horizontal-shaking {
+    animation: horizontal-shaking 0.35s normal;
+  }
+
+  @keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+  }
+}
